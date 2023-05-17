@@ -8,8 +8,7 @@ export default App;
 
 const users = ["adam", "bogdan", "czarek", "darek"];
 
-const usersString = users.join(" ");
-console.log(usersString);
-//["adam bogdan czarek darek"];
-// const usersString = users.join("-");
-//["adam-bogdan-czarek-darek"]
+const newUser = "edyta";
+const allUsers = users.concat(newUser);
+console.log(allUsers);
+//["adam", "bogdan", "czarek", "darek", "edyta"];
