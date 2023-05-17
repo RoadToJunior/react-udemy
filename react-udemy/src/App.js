@@ -5,3 +5,9 @@ function App() {
 }
 
 export default App;
+
+const users = ["adam", "bogdan", "czarek", "darek"];
+
+const nameWithLetterK = users.filter((user) => user.indexOf("k") > -1);
+
+// ["czarek", "darek"];
