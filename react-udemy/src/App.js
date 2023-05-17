@@ -8,6 +8,8 @@ export default App;
 
 const users = ["adam", "bogdan", "czarek", "darek"];
 
-const nameWithSixLetters = users.filter((user) => user.length === 6);
-console.log(nameWithSixLetters);
-//["bogdan", "czarek"];
+const usersString = users.join(" ");
+console.log(usersString);
+//["adam bogdan czarek darek"];
+// const usersString = users.join("-");
+//["adam-bogdan-czarek-darek"]
