@@ -8,6 +8,6 @@ export default App;
 
 const users = ["adam", "bogdan", "czarek", "darek"];
 
-const nameWithLetterK = users.filter((user) => user.indexOf("k") > -1);
-
-// ["czarek", "darek"];
+const nameWithSixLetters = users.filter((user) => user.length === 6);
+console.log(nameWithSixLetters);
+//["bogdan", "czarek"];
