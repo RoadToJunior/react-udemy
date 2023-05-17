@@ -8,7 +8,6 @@ export default App;
 
 const users = ["adam", "bogdan", "czarek", "darek"];
 
-const newUser = "edyta";
-const allUsers = users.concat(newUser);
-console.log(allUsers);
-//["adam", "bogdan", "czarek", "darek", "edyta"];
+const usersFirstLetterUpperCase = users.map((user) => user[0].toUpperCase());
+console.log(usersFirstLetterUpperCase);
+//["A", "B", "C", "D"];
