@@ -6,8 +6,12 @@ function App() {
 
 export default App;
 
-const usersAge = [20, 21, 23, 43];
-let usersTotalAge = 0;
-usersAge.forEach((age) => (usersTotalAge += age));
-console.log(usersTotalAge);
-//107
+const customers = [
+  { name: "Adam", age: 67 },
+  { name: "Basia", age: 27 },
+  { name: "Marta", age: 17 },
+];
+
+const isUserAdult = customers.findIndex((customer) => customer.age < 18);
+console.log(isUserAdult);
+//2
