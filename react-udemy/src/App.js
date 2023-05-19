@@ -15,3 +15,5 @@ class Country {
     console.log(`Nazwa kraju to ${this.name}`);
   }
 }
+
+const Poland = new Country("Polska");
