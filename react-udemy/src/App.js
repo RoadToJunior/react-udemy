@@ -11,4 +11,7 @@ class Country {
     this.name = name;
     this.showName = () => console.log(this.name);
   }
+  showCountryName() {
+    console.log(`Nazwa kraju to ${this.name}`);
+  }
 }
