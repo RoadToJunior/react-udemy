@@ -17,3 +17,6 @@ class Country {
 }
 
 const Poland = new Country("Polska");
+
+Poland.showCountryName(); // Nazwa kraju to Polska
+Poland.showName(); // Polska
