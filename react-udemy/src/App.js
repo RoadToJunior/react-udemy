@@ -27,3 +27,5 @@ class Student extends Person {
     );
   }
 }
+const Marcin = new Student("Marcin", [1, 4, 2, 5]);
+Marcin.showDegrees();
