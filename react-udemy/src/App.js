@@ -6,17 +6,18 @@ function App() {
 
 export default App;
 
-class Country {
+class Person {
   constructor(name) {
     this.name = name;
-    this.showName = () => console.log(this.name);
   }
-  showCountryName() {
-    console.log(`Nazwa kraju to ${this.name}`);
+  showName() {
+    console.log(`Imię osoby to${this.name}`);
   }
 }
 
-const Poland = new Country("Polska");
-
-Poland.showCountryName(); // Nazwa kraju to Polska
-Poland.showName(); // Polska
+class Student extends Person {
+  constructor(name = "", degrees = []) {
+    super(name);
+    this.degrees = degrees;
+  }
+}
