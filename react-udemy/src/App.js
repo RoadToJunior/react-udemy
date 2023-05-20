@@ -20,4 +20,10 @@ class Student extends Person {
     super(name);
     this.degrees = degrees;
   }
+  showDegrees() {
+    const completed = this.degrees.filter((degree) => degree > 2);
+    console.log(
+      `Student ${this.name} ma stopnie ${this.degrees} i zaliczył już ${completed.length} przedmioty.`
+    );
+  }
 }
