@@ -1,31 +1,16 @@
 import "./App.css";
 
+const title = "Hello Łerld!";
+const stopka = "stopka!";
+const handleClick = () => alert("klikłę");
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <h1>{title}</h1>
+      <footer onClick={handleClick}>{stopka}</footer>
+    </div>
+  );
 }
 
 export default App;
-
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
-  showName() {
-    console.log(`Imię osoby to${this.name}`);
-  }
-}
-
-class Student extends Person {
-  constructor(name = "", degrees = []) {
-    super(name);
-    this.degrees = degrees;
-  }
-  showDegrees() {
-    const completed = this.degrees.filter((degree) => degree > 2);
-    console.log(
-      `Student ${this.name} ma stopnie ${this.degrees} i zaliczył już ${completed.length} przedmioty.`
-    );
-  }
-}
-const Marcin = new Student("Marcin", [1, 4, 2, 5]);
-Marcin.showDegrees();
