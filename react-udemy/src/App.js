@@ -1,4 +1,6 @@
+import React from "react";
 import "./App.css";
+
 const title = "hello Łerld!";
 const stopka = "stopka in here";
 const handleClick = () => {
@@ -6,7 +8,7 @@ const handleClick = () => {
 };
 //komponent funkcyjny, bezstanowy
 
-const App = () => {
+const Header = () => {
   return (
     <div className="App">
       <h1>{title}</h1>
@@ -17,14 +19,27 @@ const App = () => {
 
 //komponent klasowy, stanowy
 
-class App2 extends React.Component {
+class Blog extends React.Component {
+  state = {
+    number: 1,
+  };
   render() {
     return (
       <section>
-        <h2>Komponent klasowy</h2>
+        <h2>Artykuł nr {this.state.number}</h2>
+        <p>lorem ipseum</p>
       </section>
     );
   }
 }
+
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Blog />
+    </>
+  );
+};
 
 export default App;
