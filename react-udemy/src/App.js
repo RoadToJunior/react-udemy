@@ -12,12 +12,16 @@ class ShoppingList extends React.Component {
     return (
       <ul>
         <li>
-          {this.state.item1} - {4}
+          <ItemList name={this.state.item1} />
+          <ItemList name={this.state.item2} />
+          <ItemList name={this.state.item3} />
         </li>
-        <li>{this.state.item2} - </li>
-        <li>{this.state.item3} - </li>
       </ul>
     );
   }
 }
+
+const ItemList = (props) => {
+  return <li>{props.name}</li>;
+};
 export default ShoppingList;
