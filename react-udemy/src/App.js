@@ -12,7 +12,7 @@ class ShoppingList extends React.Component {
     return (
       <ul>
         <li>
-          <ItemList name={this.state.item1} />
+          <ItemList name={this.state.item1} example={2 + 2} />
           <ItemList name={this.state.item2} />
           <ItemList name={this.state.item3} />
         </li>
@@ -22,6 +22,10 @@ class ShoppingList extends React.Component {
 }
 
 const ItemList = (props) => {
-  return <li>{props.name}</li>;
+  return (
+    <li>
+      {props.name} - {props.example}
+    </li>
+  );
 };
 export default ShoppingList;
