@@ -6,8 +6,8 @@ class App extends React.Component {
     text: "",
   };
   handleClick = () => {
-    this.useState({
-      text:
+    this.setState({
+      text: this.state.text + "a",
     });
   };
   render() {
