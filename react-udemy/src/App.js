@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <>
         <button onClick={this.handleClick}>Add "a"</button>
-        <p>{this.state.text}</p>
+        <h1>{this.state.text}</h1>
       </>
     );
   }
