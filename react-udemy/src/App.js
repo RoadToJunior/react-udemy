@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
-const handleClick = () => {};
-
 class App extends React.Component {
+  state = {
+    text: "",
+  };
+  handleClick = () => {
+    this.useState({
+      text:
+    });
+  };
   render() {
     return (
       <>
-        <button onClick={handleClick}>Add "a"</button>
-        <p></p>
+        <button onClick={this.handleClick}>Add "a"</button>
+        <p>{this.state.text}</p>
       </>
     );
   }
