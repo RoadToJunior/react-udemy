@@ -6,17 +6,17 @@ class App extends React.Component {
     value: "",
   };
 
-  handleInputChange(e) {
+  handleInputChange = (e) => {
     this.setState({
       value: e.target.value,
     });
-  }
+  };
   render() {
     return (
       <>
         <input
           placeholder="HIT A KEYBOARD"
-          onChange={this.handleInputChange.bind(this)}
+          onChange={this.handleInputChange}
           type="text"
         ></input>
         {/* <button onClick={}>Reset</button> */}
