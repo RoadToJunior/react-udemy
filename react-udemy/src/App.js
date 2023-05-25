@@ -15,6 +15,7 @@ class App extends React.Component {
     return (
       <>
         <input
+          value={this.state.value}
           placeholder="HIT A KEYBOARD"
           onChange={this.handleInputChange}
           type="text"
