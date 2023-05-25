@@ -20,7 +20,7 @@ class App extends React.Component {
           type="text"
         ></input>
         {/* <button onClick={}>Reset</button> */}
-        <h1 className="title">{this.state.value}</h1>
+        <h1 className="title">{this.state.value.toUpperCase()}</h1>
       </>
     );
   }
