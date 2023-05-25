@@ -8,9 +8,10 @@ class App extends React.Component {
       <>
         <input type="text"></input>
         <button>Reset</button>
-        <h1></h1>
+        <h1 className="title"></h1>
       </>
     );
   }
 }
+
 export default App;
