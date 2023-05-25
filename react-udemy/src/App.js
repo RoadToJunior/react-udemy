@@ -5,15 +5,17 @@ class App extends React.Component {
   state = {
     text: "",
   };
-  handleClick = () => {
+  handleClick() {
+    const letter = "a";
+
     this.setState({
-      text: this.state.text + "a",
+      text: this.state.text + letter,
     });
-  };
+  }
   render() {
     return (
       <>
-        <button onClick={this.handleClick}>Add "a"</button>
+        <button onClick={this.handleClick.bind(this)}>Add "a"</button>
         <h1>{this.state.text}</h1>
       </>
     );
