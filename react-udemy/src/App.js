@@ -16,9 +16,13 @@ class App extends React.Component {
     return (
       <>
         <button onClick={this.handleClick.bind(this)}>Add "a"</button>
-        <h1>{this.state.text}</h1>
+        <PanelResault text={this.state.text} />
       </>
     );
   }
 }
+
+const PanelResault = (props) => {
+  return <h1>{props.text}</h1>;
+};
 export default App;
