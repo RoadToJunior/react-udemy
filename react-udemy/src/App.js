@@ -3,11 +3,14 @@ import "./App.css";
 
 class App extends React.Component {
   state = {};
+  handleInputChange(e) {
+    console.log(e.target.value)
+  }
   render() {
     return (
       <>
-        <input type="text"></input>
-        <button>Reset</button>
+        <input onChange={handleInputChange} type="text"></input>
+        <button onClick={}>Reset</button>
         <h1 className="title"></h1>
       </>
     );
