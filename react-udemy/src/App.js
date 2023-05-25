@@ -6,10 +6,10 @@ class App extends React.Component {
     text: "",
   };
   handleClick() {
-    const letter = "a";
+    const number = Math.floor(Math.random() * 10);
 
     this.setState({
-      text: this.state.text + letter,
+      text: this.state.text + number,
     });
   }
   render() {
