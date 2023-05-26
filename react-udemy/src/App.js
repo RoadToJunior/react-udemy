@@ -6,13 +6,13 @@ class App extends React.Component {
     value: "",
   };
 
-  handleInputChange = (e) => {
+  handleChange = (e) => {
     this.setState({
       value: e.target.value,
     });
   };
 
-  handleResetClick = () => {
+  handleClick = () => {
     this.setState({
       value: "",
     });
@@ -24,10 +24,10 @@ class App extends React.Component {
         <input
           value={this.state.value}
           placeholder="HIT A KEYBOARD"
-          onChange={this.handleInputChange}
+          onChange={this.handleChange}
           type="text"
         ></input>
-        <button onClick={this.handleResetClick}>Reset</button>
+        <button onClick={this.handleClick}>Reset</button>
         <h1 className="title">{this.state.value.toUpperCase()}</h1>
       </>
     );
