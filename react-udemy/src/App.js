@@ -11,6 +11,13 @@ class App extends React.Component {
       value: e.target.value,
     });
   };
+
+  handleResetClick = () => {
+    this.setState({
+      value: "",
+    });
+  };
+
   render() {
     return (
       <>
@@ -20,7 +27,7 @@ class App extends React.Component {
           onChange={this.handleInputChange}
           type="text"
         ></input>
-        {/* <button onClick={}>Reset</button> */}
+        <button onClick={this.handleResetClick}>Reset</button>
         <h1 className="title">{this.state.value.toUpperCase()}</h1>
       </>
     );
