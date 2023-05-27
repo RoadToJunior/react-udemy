@@ -12,9 +12,9 @@ class Message extends React.Component {
 
   handleClick() {
     debugger;
-    this.setState({
-      messageIsActive: !this.state.messageIsActive,
-    });
+    this.setState((prevState) => ({
+      messageIsActive: !prevState.messageIsActive,
+    }));
   }
 
   render() {
