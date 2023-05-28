@@ -26,21 +26,10 @@ class Counter extends React.Component {
   }
 
   render() {
-    debugger;
     return (
       <>
-        <button onClick={this.handleMathClick.bind(this, "subtraction", 10)}>
-          -10
-        </button>
-        <button onClick={() => this.handleMathClick("subtraction")}>-1</button>
-        <button onClick={this.handleMathClick.bind(this, "reset")}>
-          Reset
-        </button>
-        <button onClick={() => this.handleMathClick("addition")}>+1</button>
-        <button onClick={this.handleMathClick.bind(this, "addition", 10)}>
-          +10
-        </button>
-        <h1>Liczba kliknięć: {this.state.count} </h1>
+        <MathButton />
+        <h1>Liczba kliknięć: {this.state.count}</h1>
         <h1>Wynik: {this.state.result}</h1>
       </>
     );
