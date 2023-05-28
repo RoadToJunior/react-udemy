@@ -12,6 +12,11 @@ class Counter extends React.Component {
         count: prevState.count + 1,
         result: prevState.result - number,
       }));
+    } else if (type === "reset") {
+      this.setState((prevState) => ({
+        count: prevState.count + 1,
+        result: 0,
+      }));
     }
   }
 
@@ -22,7 +27,9 @@ class Counter extends React.Component {
           -10
         </button>
         <button onClick={() => this.handleMathClick("subtraction")}>-1</button>
-        <button>Reset</button>
+        <button onClick={this.handleMathClick.bind(this, "reset")}>
+          Reset
+        </button>
         <button>+1</button>
         <button>+10</button>
         <h1>Liczba kliknięć: {this.state.count} </h1>
