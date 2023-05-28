@@ -21,9 +21,7 @@ class Counter extends React.Component {
         <button onClick={this.handleMathClick.bind(this, "subtraction", 10)}>
           -10
         </button>
-        <button onClick={this.handleMathClick.bind(this, "subtraction", 1)}>
-          -1
-        </button>
+        <button onClick={() => this.handleMathClick("subtraction")}>-1</button>
         <button>Reset</button>
         <button>+1</button>
         <button>+10</button>
