@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 
 class Counter extends React.Component {
@@ -6,7 +6,7 @@ class Counter extends React.Component {
     count: 0,
     result: 0,
   };
-  handleMathClick(type, number = 1) {
+  handleMathClick = (type, number = 1) => {
     if (type === "subtraction") {
       this.setState((prevState) => ({
         count: prevState.count + 1,
@@ -23,7 +23,7 @@ class Counter extends React.Component {
         result: prevState.result + number,
       }));
     }
-  }
+  };
 
   render() {
     return (
@@ -34,6 +34,25 @@ class Counter extends React.Component {
           type="subtraction"
           click={this.handleMathClick}
         />
+        <MathButton
+          name="-1"
+          number="1"
+          type="subtraction"
+          click={this.handleMathClick}
+        />
+        <MathButton name="reset" type="reset" click={this.handleMathClick} />
+        <MathButton
+          name="+1"
+          number="1"
+          type="addition"
+          click={this.handleMathClick}
+        />
+        <MathButton
+          name="+10"
+          number="10"
+          type="addition"
+          click={this.handleMathClick}
+        />
         <h1>Liczba kliknięć: {this.state.count}</h1>
         <h1>Wynik: {this.state.result}</h1>
       </>
@@ -41,7 +60,12 @@ class Counter extends React.Component {
   }
 }
 const MathButton = (props) => {
-  <button onClick={() => props.click()}>{props.name}</button>;
+  const number = parseInt(props.number);
+  return (
+    <button onClick={() => props.click(props.type, number)}>
+      {props.name}
+    </button>
+  );
 };
 
 export default Counter;
